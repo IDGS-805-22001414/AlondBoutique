@@ -21,11 +21,7 @@ function App() {
     console.log(`Carrito incrementado en ${cantidad} producto(s).`);
   }
 
-  function calcularDescuento(precio, porcentaje) {
-    let descuento = precio - (precio * (porcentaje / 100));
-    console.log(`Precio con descuento: $${descuento}`);
-    return descuento;
-  }
+
 
   function pagar(total) {
     let metodo = prompt(

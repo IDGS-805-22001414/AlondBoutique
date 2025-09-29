@@ -20,6 +20,12 @@ function Productos({ agregarAlCarrito }) {
       imagen:
         "https://img.bestdealplus.com/ae04/kf/Hf8fca2dbeffb4ede8f41cbb3256d74984.jpg",
     },
+    {
+      nombre: "Pantalones glrmurosos",
+      precio: 500,
+      imagen:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0crC1f8-65FNb6UTg2XoCPo0VYXGslrEqzQ&s",
+    },
   ];
 
   return (
