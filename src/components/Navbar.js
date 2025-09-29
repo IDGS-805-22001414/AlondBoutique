@@ -1,6 +1,19 @@
 import React from "react";
 
-function Navbar({ totalCarrito }) {
+function Navbar({ totalCarrito = 0 }) {
+  // 🎨 Estilos reutilizables
+  const botonEstilo = {
+    background: "#fff",
+    color: "#ff69b4",
+    border: "none",
+    borderRadius: "50px",
+    fontSize: "1.5rem",
+    padding: "0.4rem 0.8rem",
+    boxShadow: "0px 4px 10px rgba(0,0,0,0.2)",
+    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+    cursor: "pointer",
+  };
+
   return (
     <nav
       className="navbar navbar-expand-lg shadow-sm"
@@ -10,40 +23,33 @@ function Navbar({ totalCarrito }) {
       }}
     >
       <div className="container-fluid">
-        {/* Marca */}
+        {/* 🏷️ Marca */}
         <a
           className="navbar-brand fw-bold fs-3"
-          href="#"
+          href="/"
           style={{
             color: "#fff",
             letterSpacing: "1px",
             textShadow: "1px 1px 4px rgba(0,0,0,0.2)",
+            textDecoration: "none",
           }}
         >
           👗 Alond Boutique
         </a>
 
-        {/* Botón carrito/notificaciones */}
+        {/* 🔔 Botón notificaciones / carrito */}
         <div className="d-flex ms-auto">
           <button
+            type="button"
             className="btn position-relative"
-            style={{
-              background: "#fff",
-              color: "#ff69b4",
-              border: "none",
-              borderRadius: "50px",
-              fontSize: "1.5rem",
-              padding: "0.4rem 0.8rem",
-              boxShadow: "0px 4px 10px rgba(0,0,0,0.2)",
-              transition: "transform 0.2s ease, box-shadow 0.2s ease",
-            }}
+            style={botonEstilo}
             onMouseEnter={(e) => {
-              e.target.style.transform = "scale(1.1)";
-              e.target.style.boxShadow = "0px 6px 14px rgba(0,0,0,0.25)";
+              e.currentTarget.style.transform = "scale(1.1)";
+              e.currentTarget.style.boxShadow = "0px 6px 14px rgba(0,0,0,0.25)";
             }}
             onMouseLeave={(e) => {
-              e.target.style.transform = "scale(1)";
-              e.target.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.2)";
+              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.boxShadow = "0px 4px 10px rgba(0,0,0,0.2)";
             }}
           >
             🔔
